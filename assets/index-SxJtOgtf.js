@@ -8671,7 +8671,9 @@ function parser(textDocument, opt) {
     }
   }
   function makeSection(custom) {
-    if (options.section.disabled)
+    var _a2, _b2;
+    const disabledSection2 = (_b2 = (_a2 = options == null ? void 0 : options.section) == null ? void 0 : _a2.disabled) != null ? _b2 : false;
+    if (disabledSection2)
       return;
     const section = createSection(custom);
     syntaxTree.children.push(section);
@@ -9280,7 +9282,7 @@ function renderToHTML(tree, optionsArg) {
   var _a, _b;
   setOptions2(optionsArg);
   const doc = recursiveRender(tree);
-  const disabledRoot = (_b = (_a = options2.root) == null ? void 0 : _a.disabled) != null ? _b : false;
+  const disabledRoot = (_b = (_a = options2 == null ? void 0 : options2.root) == null ? void 0 : _a.disabled) != null ? _b : false;
   if (disabledRoot) {
     return doc.innerHTML;
   }
