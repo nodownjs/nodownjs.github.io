@@ -47,4 +47,4 @@ Error generating stack: `+i.message+`
 ===|
 [Docs (WIP)](./)
 ------
-`+e;console.log("text:"),console.log(l);const i=Rm(l);console.log("tree:"),console.log(i);const o=yh(i);r(o)},[e]),gn.useEffect(()=>{console.log("page:"),console.log(t)},[t]),ll.jsx("main",{children:ll.jsx("span",{children:"test2"})})}_i.createRoot(document.getElementById("root")).render(ll.jsx(wd.StrictMode,{children:ll.jsx(kh,{})}));
+`+e;console.log("text:"),console.log(l);try{const i=Rm(l);console.log("tree:"),console.log(i);const o=yh(i);r(o)}catch(i){console.error(i)}},[e]),gn.useEffect(()=>{console.log("page:"),console.log(t)},[t]),ll.jsx("main",{children:ll.jsx("span",{children:"test3"})})}_i.createRoot(document.getElementById("root")).render(ll.jsx(wd.StrictMode,{children:ll.jsx(kh,{})}));
