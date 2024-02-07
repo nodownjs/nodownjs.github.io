@@ -9398,23 +9398,11 @@ function App() {
 [Docs (WIP)](./)
 ------
 ` + data;
-    console.log("text:");
-    console.log(text);
-    try {
-      const tree = parser(text, {});
-      console.log("tree:");
-      console.log(tree);
-      const html = renderToHTML(tree, {});
-      setPage(html);
-    } catch (error) {
-      console.error(error);
-    }
+    const tree = parser(text, {});
+    const html = renderToHTML(tree, {});
+    setPage(html);
   }, [data]);
-  reactExports.useEffect(() => {
-    console.log("page:");
-    console.log(page);
-  }, [page]);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("main", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "test4" }) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("main", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { dangerouslySetInnerHTML: { __html: page } }) });
 }
 client.createRoot(document.getElementById("root")).render(
   /* @__PURE__ */ jsxRuntimeExports.jsx(React.StrictMode, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(App, {}) })
