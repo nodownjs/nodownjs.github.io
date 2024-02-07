@@ -9399,10 +9399,10 @@ function App() {
     console.log("text:");
     console.log(text);
     try {
-      const tree = parser(text);
+      const tree = parser(text, {});
       console.log("tree:");
       console.log(tree);
-      const html = renderToHTML(tree);
+      const html = renderToHTML(tree, {});
       setPage(html);
     } catch (error) {
       console.error(error);
