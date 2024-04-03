@@ -1,43 +1,30 @@
-import { parser, renderToHTML } from "nodown";
 import { useEffect, useState } from "react";
-import "../node_modules/nodown/styles/index.css";
-import "../node_modules/nodown/styles/theme-dark.css";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
+
+export type ThemeType = "dark" | "light";
 
 function App() {
-  const [data, setData] = useState("");
-  const [page, setPage] = useState("");
+  const [localTheme, setLocalTheme] = useState<ThemeType>("dark");
 
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(
-        "https://raw.githubusercontent.com/nodownjs/nodown.js/main/README.md"
-      );
-      const data = await response.text();
-      setData(data);
-    };
-    fetchData();
+    const localStorageTheme = localStorage.getItem("theme");
+    if (localStorageTheme) {
+      setLocalTheme(localStorageTheme as ThemeType);
+      document.body.setAttribute("data-theme", localStorageTheme);
+    }
   }, []);
 
-  useEffect(() => {
-    const text =
-      `======
-===|
-[Home](./)
-===|
-[Specs](./specs)
-===|
-[Docs (WIP)](./)
-------
-` + data;
-    const tree = parser(text);
-    const html = renderToHTML(tree);
-    setPage(html);
-  }, [data]);
-
   return (
-    <main>
-      <div dangerouslySetInnerHTML={{ __html: page }} />
-    </main>
+    <>
+      <Header
+        theme={localTheme}
+        setTheme={(theme: string) => setLocalTheme(theme as ThemeType)}
+      />
+      <Hero />
+      <Footer />
+    </>
   );
 }
 

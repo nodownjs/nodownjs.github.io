@@ -1,0 +1,188 @@
+#hero {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  // justify-content: center;
+  //   flex-direction: row-reverse;
+  align-items: start;
+  justify-content: space-between;
+
+  #nodown-output {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: start;
+    align-items: start;
+
+    > div:last-child {
+      display: flex;
+      gap: 16px;
+    }
+  }
+
+  .start-button {
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &::after {
+      content: "➜";
+      margin-left: 8px;
+      transition: margin-left 0.1s ease;
+    }
+
+    &:hover:after {
+      margin-left: 12px;
+    }
+  }
+
+  #nodown-render {
+    max-width: 600px;
+    height: 100%;
+
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  #nodown-input {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    // background-color: #2e2e2e;
+    // background-color: #1a1a1a;
+    // background-color: black;
+    margin-top: 277px;
+    transition: all 0.3s ease;
+    // color: rgba($color: #fff, $alpha: 0.6);
+    // box-shadow: 0 0 500px -20px rgba(255, 255, 255, 0.2);
+    // box-shadow: 0 0 500px -20px #000000;
+    // box-shadow: 0 0 80px -0px #00000000;
+    // border: 2px solid rgba($color: #fff, $alpha: 0.2);
+
+    textarea {
+      color: inherit;
+      max-height: var(--size);
+      --size: 555px;
+      font-size: 16px;
+      width: var(--size);
+      height: calc(var(--size) - 40px);
+      padding: 16px;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+        Liberation Mono, monospace;
+      resize: none;
+      overflow: auto;
+      border: rgba($color: #fff, $alpha: 0.1) solid 2px;
+      border: none;
+      outline: none;
+    }
+    header {
+      display: flex;
+      height: 32px;
+      gap: 8px;
+      align-items: center;
+      justify-content: end;
+      padding: 0 16px;
+
+      > span {
+        --size: 12px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 12px;
+
+        &:nth-child(1) {
+          background-color: rgb(255, 74, 74);
+        }
+        &:nth-child(2) {
+          background-color: rgb(224, 224, 46);
+        }
+        &:nth-child(3) {
+          background-color: rgb(22, 195, 22);
+        }
+      }
+    }
+  }
+}
+
+body[data-theme="dark"] #hero {
+  .start-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:first-child {
+      background-color: rgba(255, 255, 255, 10.8);
+      color: black;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  #nodown-input {
+    background-color: black;
+    color: rgba($color: #fff, $alpha: 0.6);
+    box-shadow: 0 0 80px -0px #00000000;
+    border: 2px solid rgba($color: #fff, $alpha: 0.2);
+
+    &:hover {
+      // box-shadow: 0 0 500px -20px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 80px -0px #000000;
+      color: rgba($color: #fff, $alpha: 0.8);
+      transform: translateY(-8px);
+    }
+
+    textarea {
+      background-color: #1a1a1a;
+      background-color: black;
+    }
+    header {
+      background-color: #1a1a1a;
+    }
+  }
+}
+
+body[data-theme="light"] #hero {
+  .start-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &:first-child {
+      background-color: rgba(0, 0, 0, 10.8);
+      color: white;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+
+  #nodown-input {
+    background-color: white;
+    color: rgba($color: #000, $alpha: 0.6);
+    box-shadow: 0 0 80px -0px rgba($color: #000000, $alpha: 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 20px 80px -0px rgba($color: #000000, $alpha: 0.2);
+      color: rgba($color: #000, $alpha: 1);
+      transform: translateY(-8px);
+    }
+
+    textarea {
+      background-color: #fff;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
