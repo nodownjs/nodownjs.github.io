@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 123">
+  <defs>
+    <style>
+      .cls-1,
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-1,
+      .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6.25px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect class="cls-3" width="123" height="123" rx="20.49" ry="20.49" />
+    <g>
+      <path class="cls-1" d="M11,12h100v100H11V12Z" />
+      <path class="cls-2" d="M61,53.67c0-13.81-11.19-25-25-25h-12.5v8.33c0,13.81,11.19,25,25,25h12.5" />
+      <path class="cls-2" d="M61,70.33c0-13.81,11.19-25,25-25h12.5v4.17c0,13.81-11.19,25-25,25h-12.5" />
+      <path class="cls-2" d="M61,95.33v-41.67" />
+    </g>
+  </g>
+</svg>
