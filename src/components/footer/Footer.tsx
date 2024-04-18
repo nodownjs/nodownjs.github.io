@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <p>
-        Made with ❤️ by{" "}
+        Made with ⚛️ and ❤️ by{" "}
         <a href="https://github.com/Pierre-LHOSTE">Pierre-LHOSTE</a>
       </p>
     </footer>

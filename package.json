@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gh-pages": "^6.1.1",
+    "nodown": "^0.3.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-nodown": "^0.1.20",
